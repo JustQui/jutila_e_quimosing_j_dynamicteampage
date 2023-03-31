@@ -162,7 +162,34 @@ footer {
     display: none;
 }
 
-#lightbox2 { background-image: url('../images/Thor_LB_Bg.png'); }
+#lightbox2 { 
+    width: 100vw; /* vw = viewport width => screen width */
+    height: 100vh; /* vh = viewport height => screen height */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url('../images/ethan-background.jpg'); 
+
+    background-size: 60vh; /* 55% of the viewport height */
+    background-position: 75px 55px;
+    
+}
+
+#ethan {
+    background-image: url('../images/ethan-profile.jpg');
+    background-size: 37vh;
+    background-repeat: no-repeat;
+}
+
+#ethan:hover {
+    background-image: url('../images/ethan-hover.jpg');
+    background-size: 37vh;
+    background-position: 0px -127px;
+    transition: background-image 0.3s;
+    cursor: pointer;
+}
 
 .lightbox_close {
     position: relative;
