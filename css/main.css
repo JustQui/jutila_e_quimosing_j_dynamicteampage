@@ -1,0 +1,197 @@
+/* these all apply to the body element -> global rules */
+
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+.hidden { display: none; }
+
+html, body { height: 100% }
+
+body { 
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* main header rules */
+header {
+    background-color: rgb(175, 243, 255);
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+#main-logo { width: 300px; padding: 10px 0; }
+
+/* main rules here */
+#team_nav {
+    text-align: center;
+    background-color: #675050;
+
+    background-image: url('../images/galaxy_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-blend-mode: multiply;
+}
+
+.team_members { list-style-type: none; }
+
+.team_members li { 
+    position: relative;
+    display: inline-block;
+    height: 220px;
+    margin: 10px 8px;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+.team_members li h5 {
+    position: relative;
+    color: white;
+    padding: 12px 8px;
+    font-size: 50px;
+    text-align: center;
+    
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    z-index: 500;
+}
+
+.team_members li:hover h5 {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.team_members li a { text-decoration: none; }
+
+.red_bumper {
+    width: 100%;
+    height: 6px;
+    background-color: red;
+
+    transition: height 0.2s ease;
+
+    position: absolute;
+}
+
+.team_members li:hover .red_bumper { height: 70px; }
+
+article { padding: 20px; }
+
+/* select the h3 tag inside the article tag on the page */
+/* a selector followed by a space and then ANOTHER selector gets a reference to the parent element and then the child element or elements inside of it */
+article h3  {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+/* select the p tag inside the article tag on the page */
+article p {
+    width: 80%;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.sprite {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin: 50px;
+    background-color: aqua;
+    
+    /*background-image: url('../images/marvelSprites.jpg');*/
+}
+
+#justine {
+    background-image: url('../images/icon_justine.png');
+    background-size: contain;
+}
+
+#justine:hover {
+    background-image: url('../images/icon-hover_justine.png');
+    background-size: contain;
+    transition: background-image 0.3s ease;
+    cursor: pointer;
+}
+
+/* footer rules here */
+footer {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.sticky_footer {
+    position: sticky;
+    top: 100%;
+
+    height: 80px;
+    background-color: rgb(40, 37, 37);
+}
+
+/* lightbox rules here */
+
+.lightbox { 
+    width: 100vw; /* vw = viewport width => screen width */
+    height: 100vh; /* vh = viewport height => screen height */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    background-image: url('../images/LB_Justine.png');
+    background-repeat: no-repeat;
+
+    background-size: 80vh; /* 55% of the viewport height */
+    background-position: 40px bottom;
+
+    z-index: 5000;
+
+    display: none;
+}
+
+#lightbox2 { background-image: url('../images/Thor_LB_Bg.png'); }
+
+.lightbox_close {
+    position: relative;
+    top: 20px;
+    left: 95%;
+
+    color: white;
+    font-size: 3em;
+
+    text-decoration: none;
+
+    font-weight: bolder;
+}
+
+.lightbox_close:hover { opacity: 0.5; color: red; }
+
+.lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 50px;
+}
+
+.lb_text, .lb_heading { text-align: left; }
+
+.lb_text {
+    line-height: 1.6 !important;
+    margin-left: 0;
+    padding-top: 2em;
+}
+
+/* turn the lightbox on using the :target pseudo selector */
+.lightbox:target { display: block; }
