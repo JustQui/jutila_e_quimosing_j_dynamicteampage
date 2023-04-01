@@ -10,6 +10,6 @@ let members = {
         name: 'Ethan Jutila',
         headline: "Ethan Jutila - Front-End Developer",
         bio: 'Some information about Thor',
-        avatar: '../jutila_e_quimosing_j_dynamicteampage/images/Orbitz-logo.png'
+        avatar: '../jutila_e_quimosing_j_dynamicteampage/images/ethan-background.jpg'
     }
 };
