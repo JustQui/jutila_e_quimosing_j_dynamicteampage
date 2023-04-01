@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Rajdhani&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/main.css">
     
@@ -19,14 +23,14 @@
         <nav id="team_nav">
             <ul class="team_members">
                 <li>
-                    <a href="#lightbox">
+                    <a href="#lightbox" data-member="justine">
                         <div class="sprite" id="justine"></div>
                         <h5>Justine Quimosing</h5>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#lightbox2">
+                    <a href="#lightbox" data-member="ethan">
                         <div class="sprite" id="ethan"></div>
                         <h5>Ethan Jutila</h5>
                     </a>
@@ -41,42 +45,25 @@
     </main>
 
     <footer class="sticky_footer">
-        <h3></h3>
+        <h3>Images &copy;Orbitz ltd.</h3>
     </footer>
 
     <!-- lightbox goes here -->
-    <section class="lightbox" id="lightbox">
+    <section class="lightbox-des" id="lightbox">
+        <h2 class="hidden">Member info</h2>
         <!-- close button -->
-        <a href="" class="lightbox_close">x</a>
+        <a href="" class="lightbox-close">x</a>
 
         <article>
-            <h3 class="lb_heading">Justine Quimosing</h3>
+            <h3 class="lb_heading">heading</h3>
 
-            <p class="lb_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio praesentium numquam quo quisquam sit vitae sed possimus animi harum nihil eum, ut rem sint. Omnis id natus asperiores blanditiis!
-            </p>
+            <p class="lb_text">info</p>
 
-            <p class="lb_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ratione eos blanditiis? Recusandae doloremque laboriosam sit, maiores dolore soluta quia natus minus est omnis blanditiis obcaecati consequuntur nemo aliquid laborum.
-            </p>
         </article>
+
     </section>
 
-    <section class="lightbox" id="lightbox2">
-        <!-- close button -->
-        <a href="" class="lightbox_close">x</a>
-
-        <article>
-            <h3 class="lb_heading">Ethan Jutila</h3>
-
-            <p class="lb_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio praesentium numquam quo quisquam sit vitae sed possimus animi harum nihil eum, ut rem sint. Omnis id natus asperiores blanditiis!
-            </p>
-
-            <p class="lb_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ratione eos blanditiis? Recusandae doloremque laboriosam sit, maiores dolore soluta quia natus minus est omnis blanditiis obcaecati consequuntur nemo aliquid laborum.
-            </p>
-        </article>
-    </section>
+    <script src="js/team.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
