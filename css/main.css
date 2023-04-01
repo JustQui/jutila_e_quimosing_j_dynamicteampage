@@ -126,9 +126,19 @@ article p {
     cursor: pointer;
 }
 
-#ethan {}
+#ethan {
+    background-image: url('../images/ethan-profile.jpg');
+    background-size: 39vh;
+    background-repeat: no-repeat;
+}
 
-#ethan:hover {}
+#ethan:hover {
+    background-image: url('../images/ethan-hover.jpg');
+    background-size: 40vh;
+    background-position: 0px -127px;
+    transition: background-image 0.3s;
+    cursor: pointer;
+}
 
 /* footer rules here */
 footer {
