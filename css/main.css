@@ -12,15 +12,18 @@
 html, body { height: 100% }
 
 body { 
-  font-family: sans-serif;
-  background-color: black;
-  color: white;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: rgb(175, 243, 255);
+    color: black;
+}
+
+h1 h2 h3 h4 h5 {
+    font-family: 'Play', sans-serif;
 }
 
 /* main header rules */
 header {
     background-color: rgb(175, 243, 255);
-    position: sticky;
     top: 0;
     text-align: center;
 }
@@ -109,8 +112,6 @@ article p {
     border-radius: 50%;
     margin: 50px;
     background-color: aqua;
-    
-    /*background-image: url('../images/marvelSprites.jpg');*/
 }
 
 #justine {
@@ -121,9 +122,13 @@ article p {
 #justine:hover {
     background-image: url('../images/icon-hover_justine.png');
     background-size: contain;
-    transition: background-image 0.3s ease;
+    transition: background-image 0.3s ease-in-out;
     cursor: pointer;
 }
+
+#ethan {}
+
+#ethan:hover {}
 
 /* footer rules here */
 footer {
@@ -142,29 +147,32 @@ footer {
 
 /* lightbox rules here */
 
-.lightbox { 
-    width: 100vw; /* vw = viewport width => screen width */
-    height: 100vh; /* vh = viewport height => screen height */
-
+.lightbox-des { 
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-
     background-color: rgba(0, 0, 0, 0.85);
-    background-image: url('../images/LB_Justine.png');
     background-repeat: no-repeat;
-
-    background-size: 80vh; /* 55% of the viewport height */
+    background-size: 80vh;
     background-position: 40px bottom;
-
     z-index: 5000;
+    color: antiquewhite;
 
-    display: none;
-}
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    visibility: collapse;
+  }
+  
+  .lightbox-active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
 
-#lightbox2 { background-image: url('../images/Thor_LB_Bg.png'); }
-
-.lightbox_close {
+.lightbox-close {
     position: relative;
     top: 20px;
     left: 95%;
@@ -175,11 +183,13 @@ footer {
     text-decoration: none;
 
     font-weight: bolder;
+
+    transition: all 0.3s ease-in-out;
 }
 
-.lightbox_close:hover { opacity: 0.5; color: red; }
+.lightbox-close:hover { opacity: 0.5; color: orangered; }
 
-.lightbox article {
+.lightbox-des article {
     width: 55%;
     margin-left: 40%;
     padding-top: 50px;
@@ -194,4 +204,4 @@ footer {
 }
 
 /* turn the lightbox on using the :target pseudo selector */
-.lightbox:target { display: block; }
+.lightbox-des:target { display: block; }
